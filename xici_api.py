@@ -6,6 +6,7 @@
 # @Software: PyCharm Community Edition
 import random
 
+from funcs import ls_files, get_file
 
 
 class api_proxy(object):
@@ -25,8 +26,12 @@ class api_proxy(object):
 
 
 def main():
-    api = api_proxy('result.txt')
-    print(api.get_proxy())
+    print('当前目录下有以下文件或目录,请选择序号：')
+    for no in range(len(ls_files())):
+        print(str(no+1) + ':' + ls_files()[no])
+    check_filename = get_file(input('请输入待检查ip文件所在序号：'))
+    api = api_proxy(check_filename)
+    api.get_proxy()
 
 
 

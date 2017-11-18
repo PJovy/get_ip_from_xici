@@ -29,12 +29,5 @@ def get_url(msg):
 
 
 
-
-
-
-
-
-
-
 if __name__ == '__main__':
-    print(get_url('输入网址:'))
+    pass

@@ -18,3 +18,5 @@
 - result_filename:检查结果保存的文件全名，包含txt后缀
 - url：待测试的url
 3. check方法运行ip检查程序
+
+- ### 在test.py当中有引用测试案例

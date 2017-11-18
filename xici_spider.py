@@ -8,7 +8,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-class xiciSpider(object):
+class xici_spider(object):
     # 初始化
     # myheaders信息,需要自定义
     # 总共需要爬取的页面数量，默认为2
@@ -46,7 +46,7 @@ class xiciSpider(object):
 
 
     # 汇总方法，遍历，将所有的我们需要的ip信息抓取并写入txt
-    def make_original_proxies_txt(self):
+    def crawl(self):
         for page in range(1, self.pages+1):
             for ip in self.get_ips(self.get_html(str(page))):
                 for info in ip[2:len(ip)-1]:

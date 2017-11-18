@@ -6,7 +6,7 @@
 # @Software: PyCharm Community Edition
 import requests
 
-from ls_files import ls_files, get_file
+from funcs import ls_files, get_file, get_url
 
 
 # 检查代理IP是否可用
@@ -56,7 +56,7 @@ def main():
     check_filename = get_file(input('请输入待检查ip文件所在序号：'))
     print(check_filename)
     result_filename = input('输入检查结果文件名：')
-    url = 'https://www.lagou.com/'
+    url = get_url('输入网址：')
     checker = xici_checker(check_filename=check_filename,result_filename=result_filename,url=url)
     for proxy in checker.get_proxy():
         checker.check(proxy)

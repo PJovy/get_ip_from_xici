@@ -8,20 +8,27 @@ import random
 
 
 
-class API_proxy(object):
+class api_proxy(object):
 
-    def __init__(self):
-        self.name = API_proxy
+    def __init__(self, filename):
+        self.name = 'api_proxy'
+        self.filename = filename
+        self.L = self.get_proxy_list()
+
+    def get_proxy_list(self):
+        with open(self.filename,'r',encoding='utf-8') as fr:
+            return fr.readlines()
+
 
     def get_proxy(self):
-        with open('proxies_extract_checked.txt') as fr:
-            proxy = random.choice(fr.readlines())
-            return proxy.strip()
+        return random.choice(self.L).strip()
+
 
 def main():
-    pass
+    api = api_proxy('result.txt')
+    print(api.get_proxy())
 
 
 
 if __name__ == '__main__':
-    main()
+    pass

@@ -60,8 +60,8 @@ def crawl_xici():
     pages = int(input('请输入你需要爬取的总页数(默认抓2页)：'))
     originipfile = input('请输入保存的txt文件名：')
     print("starting crawl......")
-    spider = xiciSpider(pages=pages,originipfile=originipfile)
-    spider.make_original_proxies_txt()
+    spider = xici_spider(pages=pages,originipfile=originipfile)
+    spider.crawl()
     print("finish crawl......")
 
 

@@ -4,11 +4,10 @@
 # @Site    : 
 # @File    : main.py
 # @Software: PyCharm Community Edition
-import xici_api
-
+import xici_checker
 
 def main():
-    xici_api.main()
+    xici_checker.main()
 
 
 if __name__ == '__main__':

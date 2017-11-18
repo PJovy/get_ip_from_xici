@@ -5,8 +5,11 @@
 # @File    : main.py
 # @Software: PyCharm Community Edition
 import xici_checker
+import xici_spider
+
 
 def main():
+    xici_spider.main()
     xici_checker.main()
 
 
